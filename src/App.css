@@ -1,38 +1,33 @@
-.App {
-  text-align: center;
-}
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+.App{
+  font-size: 1.5em;
+  background-color: #070421;
+  color: #60D7AC;
+  min-height:800px ;
+  font-family: 'Roboto Mono', monospace;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-style: solid;
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+  --nr:8; /* number of rows */
+  --nc:10; /* number of columns */
+  --b:2px; /* border length */
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  
+  --g:transparent calc(100% - var(--b)),#454059 0;
+  background:
+    linear-gradient(to right, var(--g)),
+    linear-gradient(to bottom,var(--g)),
+    #070421;
+  background-size:
+    calc((100% - var(--b)*(var(--nc) - 1))/var(--nc) + var(--b)) 100%,
+    100% calc((100% - var(--b)*(var(--nr) - 1))/var(--nr) + var(--b));
 }
-
-.App-link {
-  color: #61dafb;
+.qr{
+  padding: 1em;
+  width: 80%;
+  margin: 0 auto;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.Collapsible__contentInner{
+  height: 10%;
 }
